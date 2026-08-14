@@ -44,7 +44,4 @@ Notes for maintainers
 - Components live in `src/components/` (Hero, About, Projects, Contact, etc.).
 - Project data is seeded in `src/components/Projects.tsx`.
 
-Want edits?
-If you'd like a different tone, more project details, or direct demo links added, tell me which projects to highlight and I’ll update the README and placeholders.
-
 Thanks for dropping by — enjoy poking around the code and projects.

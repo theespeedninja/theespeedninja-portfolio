@@ -1,75 +1,50 @@
-# React + TypeScript + Vite
+Danny — Playground & Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hey — I'm Danny. This repo is the code behind my portfolio site: a small, speedy React + TypeScript space where I show the things I build, the problems I like to solve, and how to reach me.
 
-Currently, two official plugins are available:
+Quick bio
+I'm Danny Ngatia, a software engineering student and developer based in Nairobi, Kenya. I play chess, think strategically, and bring that same mindset to software: break problems down, find practical moves, and build for tomorrow. I'm learning Django, sharpening my Java, and I love tackling challenges that help me grow toward a bigger goal — building impactful tech across Africa and beyond.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Selected work
+- F1 Drivers — A Django app showing cards and details for current Formula 1 drivers. GitHub: https://github.com/theespeedninja/F1-drivers
+- Django Polls App — A learning project following the official Django tutorial. GitHub: https://github.com/theespeedninja/Django_poll_App
+- Kiswate Guide — Collaborative docs/support site for Kiswate. GitHub: https://github.com/theespeedninja/kiswate_support
 
-## React Compiler
+If a link is missing above, check `src/components/Projects.tsx` for the latest entries.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Contact & socials
+- Email: dannygitonga1@gmail.com
+- Location: Nairobi, Kenya
+- GitHub: https://github.com/theespeedninja
+- LinkedIn: https://www.linkedin.com/in/danny-ngatia-gitonga
 
-## Expanding the ESLint configuration
+Why this site exists
+I built this portfolio to explain not just what I can ship, but how I think. The site focuses on clarity, a bit of personality, and performance — so visitors can quickly see my work, my approach, and how to get in touch.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Tech snapshot
+- Built with: React, TypeScript, Vite
+- Styling: modern CSS (see `src/index.css`)
+- Motion: small helpers in `lib/motionConfig.ts`
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Run it locally
+Install dependencies:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Start the dev server:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run dev
 ```
+
+Notes for maintainers
+- Source: `src/` — main entry is `src/main.tsx`.
+- Components live in `src/components/` (Hero, About, Projects, Contact, etc.).
+- Project data is seeded in `src/components/Projects.tsx`.
+
+Want edits?
+If you'd like a different tone, more project details, or direct demo links added, tell me which projects to highlight and I’ll update the README and placeholders.
+
+Thanks for dropping by — enjoy poking around the code and projects.

@@ -1,5 +1,6 @@
     import { m } from "framer-motion";
     import { GraduationCap, Award } from "lucide-react";
+    import { scrollViewport, fadeTransition } from "../lib/motionConfig";
 
     export default function Education() {
     return (
@@ -11,7 +12,8 @@
             className="section-heading"
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={scrollViewport}
+            transition={fadeTransition}
             >
             <span>05 / EDUCATION</span>
             <h2>Building the <strong>foundation.</strong></h2>
@@ -23,7 +25,8 @@
                 className="education-card"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={scrollViewport}
+                transition={fadeTransition}
             >
 
                 <div className="education-icon">
@@ -50,8 +53,8 @@
                 className="education-card"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.15 }}
-                viewport={{ once: true }}
+                viewport={scrollViewport}
+                transition={fadeTransition}
             >
 
                 <div className="education-icon">

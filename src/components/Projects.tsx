@@ -1,5 +1,6 @@
     import { m } from "framer-motion";
     import { GitBranch, ExternalLink, ArrowUpRight } from "lucide-react";
+    import { scrollViewport, fadeTransition } from "../lib/motionConfig";
 
     const projects = [
     {
@@ -41,7 +42,8 @@
             className="section-heading project-heading"
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={scrollViewport}
+            transition={fadeTransition}
             >
             <span>03 / SELECTED WORK</span>
             <h2>Things I've <strong>built.</strong></h2>
@@ -55,8 +57,8 @@
                 key={project.title}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
+                viewport={scrollViewport}
+                transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
                 >
 

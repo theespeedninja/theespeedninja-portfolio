@@ -7,6 +7,7 @@
         Send,
     } from "lucide-react";
     import LinkedinIcon from "./icons/LinkedinIcon";
+    import { scrollViewport, fadeTransition } from "../lib/motionConfig";
 
     export default function Contact() {
     return (
@@ -18,7 +19,8 @@
             className="contact-heading"
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={scrollViewport}
+            transition={fadeTransition}
             >
             <span>06 / GET IN TOUCH</span>
 
@@ -40,7 +42,8 @@
                 className="contact-info"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                viewport={scrollViewport}
+                transition={fadeTransition}
             >
 
                 <ContactItem
@@ -78,7 +81,8 @@
                 method="POST"
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                viewport={scrollViewport}
+                transition={fadeTransition}
             >
 
                 <div className="form-row">

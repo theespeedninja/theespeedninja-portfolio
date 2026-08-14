@@ -5,6 +5,7 @@
     Database,
     Wrench,
     } from "lucide-react";
+    import { scrollViewport, fadeTransition } from "../lib/motionConfig";
 
     const skillGroups = [
     {
@@ -59,7 +60,8 @@
             className="section-heading"
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={scrollViewport}
+            transition={fadeTransition}
             >
             <span>02 / TECH STACK</span>
             <h2>Tools of the <strong>trade.</strong></h2>
@@ -73,7 +75,7 @@
                 key={group.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={scrollViewport}
                 transition={{ delay: index * 0.1 }}
                 >
 

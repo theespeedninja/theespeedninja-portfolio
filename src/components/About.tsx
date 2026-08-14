@@ -1,6 +1,7 @@
     import { m } from "framer-motion";
     import type { ReactNode } from "react";
     import { Brain, Target, Lightbulb } from "lucide-react";
+    import { scrollViewport, fadeTransition } from "../lib/motionConfig";
 
     export default function About() {
     return (
@@ -12,7 +13,8 @@
             className="section-heading"
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={scrollViewport}
+            transition={fadeTransition}
             >
             <span>01 / ABOUT ME</span>
             <h2>Strategic thinking.<br /><strong>Practical solutions.</strong></h2>
@@ -24,7 +26,8 @@
                 className="about-text"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                viewport={scrollViewport}
+                transition={fadeTransition}
             >
                 <p>
                 I'm <strong>Danny Ngatia</strong>, a Software Engineering
@@ -95,7 +98,8 @@
         className="info-card"
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={scrollViewport}
+        transition={fadeTransition}
         whileHover={{ y: -5 }}
         >
         <div className="card-icon">{icon}</div>

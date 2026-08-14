@@ -1,5 +1,6 @@
         import { m } from "framer-motion";
         import { BriefcaseBusiness } from "lucide-react";
+        import { scrollViewport, fadeTransition } from "../lib/motionConfig";
 
         const experiences = [
         {
@@ -28,7 +29,8 @@
                 className="section-heading"
                 initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={scrollViewport}
+                transition={fadeTransition}
                 >
                 <span>04 / EXPERIENCE</span>
                 <h2>Where I've <strong>contributed.</strong></h2>
@@ -42,7 +44,8 @@
                     key={experience.company}
                     initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={scrollViewport}
+                    transition={fadeTransition}
                     >
 
                     <div className="timeline-marker">
